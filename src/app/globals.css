@@ -24,10 +24,48 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  background-image: url("/background.png");
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.text-gradiant {
+  background: linear-gradient(90deg, #1c1c1c 0%, #e3e3e3 50.1%, #1c1c1c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.eclipce {
+  fill: rgba(16, 28, 92, 0.64);
+  filter: blur(100px);
+}
+.header-background {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(25px);
+}
+.plain-text {
+  /* To prevent gradient inheritance, explicitly set a background and color */
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: black; /* Set any color you want for the text */
+}
+.magicpattern {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: repeat;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M866.5 635Q871 770 734 785t-215.5-42.5Q440 685 335.5 690t-181-92.5Q78 500 157 404t181.5-91q102.5 5 176-39t152.5 1.5q79 45.5 137 135T866.5 635Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22%233d00e3%22 d=%22M866.5 635Q871 770 734 785t-215.5-42.5Q440 685 335.5 690t-181-92.5Q78 500 157 404t181.5-91q102.5 5 176-39t152.5 1.5q79 45.5 137 135T866.5 635Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+.masked-text {
+  background: yellow; /* Match this color to the background of the container/page */
+  -webkit-background-clip: text;
+  opacity: 60%;
+  color: yellow;
+  display: inline;
 }
